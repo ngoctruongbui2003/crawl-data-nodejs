@@ -4,11 +4,15 @@ Using Node JS and Puppeteer
 The Api return data as JSON
 ## top 100 songs
 path: /category/[category-id]
+
 example: 
 - /category/1
 - /category/23
+
 id:[1-25]
+
 corresponding to 
+
 1. nhac-tre-moi
 2. tru-tinh-moi
 3. remix-viet-moi
