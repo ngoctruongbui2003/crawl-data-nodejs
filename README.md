@@ -2,7 +2,7 @@
 A Api crawl data from website "nhaccuatui.com" 
 Using Node JS and Puppeteer
 The Api return data as JSON
-##top 100 songs
+## top 100 songs
 path: /category/[category-id]
 example: 
 - /category/1
@@ -33,7 +33,7 @@ corresponding to
 23. beat-moi
 24. the-loai-khac-moi
 25. tui-hat-moi
-##Search for songs
+## Search for songs
 path: /search/[query]
 example:
 - /search/hoa la
