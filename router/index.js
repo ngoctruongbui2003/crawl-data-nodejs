@@ -7,5 +7,6 @@ router.get('/', (req, res) => {
 })
 
 router.use('/nhaccuatui', require('./nhaccuatui.route'));
+router.use('/beostore', require('./beostore.route'));
 
 module.exports = router;

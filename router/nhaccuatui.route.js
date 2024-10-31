@@ -101,7 +101,6 @@ router.get('/playlist/:playlistid', async (req, res) => {
             })
         } catch (err) {
             console.log(err);
-            res.status(500).send('server errror');
         }
 
         console.log(`-----END-----${new Date()}`);
