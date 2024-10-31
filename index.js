@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const puppeteer = require('puppeteer');
-const router = require('./router/route');
+const router = require('./router');
 
 
 const app = express();

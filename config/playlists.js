@@ -1,0 +1,250 @@
+const playlists = [
+    {
+        id: 1, // top 100 nhạc trẻ hay nhất
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/apt-rose-ft-bruno-mars.eaFQ8IVnfq1x.html",
+            "https://www.nhaccuatui.com/bai-hat/mantra-jennie.7JIHT0ig3eW2.html",
+            "https://www.nhaccuatui.com/bai-hat/cham-hoa-mono.7YtLdl79idwL.html",
+            "https://www.nhaccuatui.com/bai-hat/dau-phai-vo-anh-rap-viet-ft-dangrangto.wUI1ftKF406O.html",
+            "https://www.nhaccuatui.com/bai-hat/whiplash-aespa.8SF4Czh6rHxM.html",
+            "https://www.nhaccuatui.com/bai-hat/u-thi-chia-tay-captain-ft-rhyder.U9EpKQ7w4t2m.html",
+            "https://www.nhaccuatui.com/bai-hat/ngua-o-dangrangto-ft-teuyungboy-ft-donal.1Nr12dvjtPpl.html",
+            "https://www.nhaccuatui.com/bai-hat/bau-troi-moi-da-lab-ft-minh-toc-lam.Azs1yEsbO630.html",
+            "https://www.nhaccuatui.com/bai-hat/tinh-dau-qua-chen-anh-trai-say-hi-ft-quang-hung-masterd-ft-negav-ft-phap-kieu-ft-erik.ZViQdtds3AH7.html",
+            "https://www.nhaccuatui.com/bai-hat/sao-hang-a-anh-trai-say-hi-ft-hieuthuhai-ft-duong-domic-ft-song-luan-ft-jsol.9hVrZ2qY9XqD.html",
+            "https://www.nhaccuatui.com/bai-hat/tran-bo-nho-anh-trai-say-hi-ft-duong-domic.PJMDWo8qSqvI.html",
+            "https://www.nhaccuatui.com/bai-hat/phong-zin-zin-tlinh-ft-low-g.xSDKNwZIQPPY.html",
+            "https://www.nhaccuatui.com/bai-hat/noi-vuc-noi-troi-remix-le-bao-binh.3WUKAwe0aWHe.html",
+            "https://www.nhaccuatui.com/bai-hat/kim-phut-kim-gio-isaac-ft-negav-ft-hieuthuhai-ft-hurrykng-ft-phap-kieu-ft-anh-trai-say-hi.I27zoLp2Ovzz.html",
+            "https://www.nhaccuatui.com/bai-hat/tuyet-tren-pho-rap-viet-ft-gill.WTbzAT89eObH.html",
+            "https://www.nhaccuatui.com/bai-hat/hop-on-da-show-tlinh-ft-low-g.aYLxhJMqB1Wx.html",
+            "https://www.nhaccuatui.com/bai-hat/troi-em-lai-anh-trai-say-hi-ft-quang-hung-masterd.O8F8TRrOO8Cy.html",
+            "https://www.nhaccuatui.com/bai-hat/canh-hoa-heo-tan-domino-remix-khanh-phuong.n9sNfMJlVyTi.html",
+            "https://www.nhaccuatui.com/bai-hat/that-qua-dang-de-yeu-nicky-ft-amee.M9DMNDKkzEHI.html",
+            "https://www.nhaccuatui.com/bai-hat/neu-nhung-tiec-nuoi-vu.dvLYRJQDgLFW.html",
+            "https://www.nhaccuatui.com/bai-hat/binh-yen-vu-ft-binz.56Um1CgCynmG.html",
+            "https://www.nhaccuatui.com/bai-hat/de-anh-luong-thien-huy-pt-remix-linh-huong-luz-ft-meme-media.Adlp6HeLdamY.html",
+            "https://www.nhaccuatui.com/bai-hat/dung-hoi-em-on-khong-1988s-remix-dieu-van-ft-h2k.E1VAMbSjgOWB.html",
+            "https://www.nhaccuatui.com/bai-hat/di-giua-troi-ruc-ro-original-soundtrack-from-di-giua-troi-ruc-ro-ngo-lan-huong-ft-sk-pictures.ISY94SDm2hFh.html",
+            "https://www.nhaccuatui.com/bai-hat/say-yes-vietnamese-version-pialinh-ft-ogenus.dUrYikOlG0oO.html",
+            "https://www.nhaccuatui.com/bai-hat/anh-biet-roi-rhyder-ft-anh-trai-say-hi.Pkd8bL4Ah3ce.html",
+            "https://www.nhaccuatui.com/bai-hat/tai-sao-vay-rap-viet-ft-shayda.LnTYHjTT1ux6.html",
+            "https://www.nhaccuatui.com/bai-hat/rua-thau-rap-viet-ft-7dnight.sxfFibTQo4K0.html",
+            "https://www.nhaccuatui.com/bai-hat/ngao-ngo-anh-trai-say-hi-ft-hieuthuhai-ft-erik-ft-anh-tu-atus-ft-jsol-ft-orange.gwkZrcqfbbOI.html",
+            "https://www.nhaccuatui.com/bai-hat/khong-yeu-em-thi-yeu-ai-vu-ft-low-g.exrnjWcqFJNW.html",
+            "https://www.nhaccuatui.com/bai-hat/minh-anh-thoi-negav.j5zHTISPbKto.html",
+            "https://www.nhaccuatui.com/bai-hat/buoc-za-di-xa-wxrdie.2B7jDDapjQ7b.html",
+            "https://www.nhaccuatui.com/bai-hat/chan-thanh-anh-trai-say-hi-ft-rhyder-ft-captain-ft-quang-hung-masterd-ft-wean-ft-ali-hoang-duong.ABLMB2aG7Gtr.html",
+            "https://www.nhaccuatui.com/bai-hat/walk-anh-trai-say-hi-ft-hurrykng-ft-hieuthuhai-ft-negav-ft-phap-kieu-ft-isaac.IHIi82CDXKDo.html",
+            "https://www.nhaccuatui.com/bai-hat/regret-anh-trai-say-hi-ft-quan-ap-ft-phap-kieu-ft-quang-trung-ft-ali-hoang-duong-ft-lam-bao-ngoc.0U4Pr5esABDT.html",
+            "https://www.nhaccuatui.com/bai-hat/deu-la-cua-em-quang-trung-ft-song-luan-ft-anh-tu-atus-ft-anh-tu-ft-duong-domic-ft-anh-trai-say-hi.yLOyAkwsTktH.html",
+            "https://www.nhaccuatui.com/bai-hat/new-woman-lisa-ft-rosalia.s0LaZJrSopJc.html",
+            "https://www.nhaccuatui.com/bai-hat/khoa-chan-24kright-ft-mason-nguyen-ft-nam-cocain-ft-hipz.nFwRTZjufhOC.html",
+            "https://www.nhaccuatui.com/bai-hat/im-thinking-about-you-anh-trai-say-hi-ft-rhyder-ft-wean-ft-duc-phuc-ft-gemini-hung-huynh-ft-tlinh.ITZdSZPfW2PF.html",
+            "https://www.nhaccuatui.com/bai-hat/2-4-wn.RzwMj49Tlync.html",
+            "https://www.nhaccuatui.com/bai-hat/catch-me-if-you-can-anh-trai-say-hi-ft-quang-hung-masterd-ft-negav-ft-cong-duong-ft-nicky.jFehIyXrCHMm.html",
+            "https://www.nhaccuatui.com/bai-hat/yen-binh-co-qua-dat-khong-khiem.42K2PZbUvpHN.html",
+            "https://www.nhaccuatui.com/bai-hat/hao-quang-rhyder-ft-duong-domic-ft-phap-kieu-ft-anh-trai-say-hi.GE48izoiT3Oz.html",
+            "https://www.nhaccuatui.com/bai-hat/rockstar-lisa.wmk6nwxjdNEr.html",
+            "https://www.nhaccuatui.com/bai-hat/neu-anh-trang-khong-den-vuong-vu-tru-leto-ft-kieu-tuan-thua-qiao-jun-cheng.WUAgSPUK90j3.html",
+            "https://www.nhaccuatui.com/bai-hat/de-y-wren-evans.4rxzq1YXKJly.html",
+            "https://www.nhaccuatui.com/bai-hat/abcd-nayeon.EcegQxy6M38Q.html",
+            "https://www.nhaccuatui.com/bai-hat/em-oi-anh-phai-lam-sao-air-remix-duong-minh-tuan.1x8xksmkimMh.html",
+            "https://www.nhaccuatui.com/bai-hat/hu-khong-kha.zg8rqHWqlAkT.html",
+            "https://www.nhaccuatui.com/bai-hat/nang-co-mang-em-ve-shartnuss-ft-trd.ClkcZFlvjsqy.html"
+        ]
+    },
+    {
+        id: 2, // Danh doi - Obito
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/intro-obito.aPd7cfPStVRy.html",
+            "https://www.nhaccuatui.com/bai-hat/xuat-phat-diem-obito.XkIezhddwRMo.html",
+            "https://www.nhaccuatui.com/bai-hat/cl5-interlude-obito.WpCUyOLY59IU.html",
+            "https://www.nhaccuatui.com/bai-hat/dau-duong-xo-cho-obito-ft-lang-ld.oNrdOeshSTxb.html",
+            "https://www.nhaccuatui.com/bai-hat/bien-gioi-long-binh-obito.xaK2ufJDP4oO.html",
+            "https://www.nhaccuatui.com/bai-hat/16-obito.xQRRZ60qy0J9.html",
+            "https://www.nhaccuatui.com/bai-hat/sai-gon-oi-obito.HaEC65GNGaXZ.html",
+            "https://www.nhaccuatui.com/bai-hat/tron-chay-obito.AuH0OJRO30ND.html",
+            "https://www.nhaccuatui.com/bai-hat/cat-canh-interlude-obito.WclMYoabkAyJ.html",
+            "https://www.nhaccuatui.com/bai-hat/ha-noi-obito-ft-vstra.d134Al3iEsL1.html",
+            "https://www.nhaccuatui.com/bai-hat/vo-dieu-kien-obito.JWCY1OZhO1Nh.html",
+            "https://www.nhaccuatui.com/bai-hat/danh-doi-obito-ft-rpt-mck.xhe7vA8gRERx.html",
+            "https://www.nhaccuatui.com/bai-hat/backstage-freestyle-obito.9lZWDV7JkVJH.html",
+            "https://www.nhaccuatui.com/bai-hat/tell-the-kids-i-love-them-obito-ft-shiki.NgCn5K89L6ws.html",
+            "https://www.nhaccuatui.com/bai-hat/uoc-mo-cua-me-interlude-obito.Rqkn0Ddcu2av.html",
+            "https://www.nhaccuatui.com/bai-hat/con-ke-ba-nghe-obito.WojwXpyFuo5N.html",
+            "https://www.nhaccuatui.com/bai-hat/champion-obito.EmCL1qPOOzP7.html",
+            "https://www.nhaccuatui.com/bai-hat/chua-xong-obito.Ogym6DqpGbwd.html",
+            "https://www.nhaccuatui.com/bai-hat/tu-su-obito.IimYQz5fT2W3.html",
+            "https://www.nhaccuatui.com/bai-hat/outro-obito.y9AQSjmYO4Gf.html"
+        ]
+    },
+    {
+        id: 3, // An - Lil Wuyn
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/intro-lil-wuyn.D3SPhCHozhF1.html",
+            "https://www.nhaccuatui.com/bai-hat/an-lil-wuyn-ft-minstu.IEfAp3jesEn3.html",
+            "https://www.nhaccuatui.com/bai-hat/mo-mat-lil-wuyn-ft-den.tpRRkICa4MBi.html",
+            "https://www.nhaccuatui.com/bai-hat/no-way-back-lil-wuyn-ft-b-wine.U8ySSaaYO6Zu.html",
+            "https://www.nhaccuatui.com/bai-hat/tam-tu-lil-wuyn-ft-cam.REtezTNPn7Dq.html",
+            "https://www.nhaccuatui.com/bai-hat/chop-mat-lil-wuyn-ft-young-h-ft-pjpo.vxr5rQj83Ezm.html",
+            "https://www.nhaccuatui.com/bai-hat/nao-biet-dau-lil-wuyn.tvnKJ3DQNGSW.html",
+            "https://www.nhaccuatui.com/bai-hat/vu-vo-lil-wuyn-ft-16-brt.AkruyhybMGip.html",
+            "https://www.nhaccuatui.com/bai-hat/thay-doi-lil-wuyn.ujoFQu8m3Jqt.html",
+            "https://www.nhaccuatui.com/bai-hat/more-life-lil-wuyn.9e90buRj6eCF.html",
+            "https://www.nhaccuatui.com/bai-hat/nham-mat-lil-wuyn-ft-spyder-ft-kwzzzy.TLIfKNdhfBJ7.html",
+            "https://www.nhaccuatui.com/bai-hat/hao-quang-lil-wuyn-ft-rhymastic.ZRMxZxVQCMU6.html",
+            "https://www.nhaccuatui.com/bai-hat/fnd-lil-wuyn-ft-vsoul.G37Ur8zdrxVY.html"
+        ]
+    },
+    {
+        id: 4, // Nhung tiec nuoi - Vu
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/neu-nhung-tiec-nuoi-vu.dvLYRJQDgLFW.html",
+            "https://www.nhaccuatui.com/bai-hat/mua-mua-ay-vu.JloHP5sAf9Ye.html",
+            "https://www.nhaccuatui.com/bai-hat/ngoi-cho-trong-van-vuong-vu-ft-my-anh.UrMtud3m1Ksf.html",
+            "https://www.nhaccuatui.com/bai-hat/danh-het-xuan-thi-de-cho-nhau-vu-ft-ha-anh-tuan.umgyBvkr1wvn.html",
+            "https://www.nhaccuatui.com/bai-hat/va-em-se-luon-la-nguoi-toi-yeu-nhat-vu-ft-khang.AVa8eFOQunBP.html",
+            "https://www.nhaccuatui.com/bai-hat/nhung-chuyen-bay-vu.v72eYSOtf1Ps.html",
+            "https://www.nhaccuatui.com/bai-hat/may-khoc-vi-dieu-gi-vu.4aTXs1Dz6zwg.html",
+            "https://www.nhaccuatui.com/bai-hat/nhung-loi-hua-bo-quen-vu-ft-dear-jane.cJ6lXsQLONjC.html",
+            "https://www.nhaccuatui.com/bai-hat/khong-yeu-em-thi-yeu-ai-vu-ft-low-g.exrnjWcqFJNW.html",
+            "https://www.nhaccuatui.com/bai-hat/binh-yen-vu-ft-binz.56Um1CgCynmG.html"
+        ]
+    },
+    {
+        id: 5, // thank u, next - Ariana Grande
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/imagine-ariana-grande.v2zlhp7nGmHA.html",
+            "https://www.nhaccuatui.com/bai-hat/needy-ariana-grande.A3rLKG0bjP23.html",
+            "https://www.nhaccuatui.com/bai-hat/nasa-ariana-grande.bciYDReVYl6X.html",
+            "https://www.nhaccuatui.com/bai-hat/bloodline-ariana-grande.cMNXAZjv3Zxr.html",
+            "https://www.nhaccuatui.com/bai-hat/fake-smile-ariana-grande.bi27acxF1mTY.html",
+            "https://www.nhaccuatui.com/bai-hat/bad-idea-ariana-grande.p4xHkElfV4Gm.html",
+            "https://www.nhaccuatui.com/bai-hat/make-up-ariana-grande.iWCh6VbWil7N.html",
+            "https://www.nhaccuatui.com/bai-hat/ghostin-ariana-grande.hyGbPooNFmdr.html",
+            "https://www.nhaccuatui.com/bai-hat/in-my-head-ariana-grande.5YxfZYXZgk2n.html",
+            "https://www.nhaccuatui.com/bai-hat/7-rings-ariana-grande.6jZz4fuWkTt3.html",
+            "https://www.nhaccuatui.com/bai-hat/thank-u-next-ariana-grande.UDIK6t5XWnHS.html",
+            "https://www.nhaccuatui.com/bai-hat/break-up-with-your-girlfriend-im-bored-ariana-grande.QDlP7gLfDsuj.html"
+        ]
+    },
+    {
+        id: 6, // 1989 (Taylor's Version) - Taylor Swift
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/welcome-to-new-york-taylors-version-taylor-swift.h6Qe1PDtym9H.html",
+            "https://www.nhaccuatui.com/bai-hat/blank-space-taylors-version-taylor-swift.jtQnUZURezM4.html",
+            "https://www.nhaccuatui.com/bai-hat/style-taylors-version-taylor-swift.EODYhXqi3lH1.html",
+            "https://www.nhaccuatui.com/bai-hat/out-of-the-woods-taylors-version-taylor-swift.Uoj3tSzzMkKn.html",
+            "https://www.nhaccuatui.com/bai-hat/all-you-had-to-do-was-stay-taylors-version-taylor-swift.4FvQFBTWlSed.html",
+            "https://www.nhaccuatui.com/bai-hat/shake-it-off-taylors-version-taylor-swift.ZpuXKVs1olqu.html",
+            "https://www.nhaccuatui.com/bai-hat/i-wish-you-would-taylors-version-taylor-swift.mBqnB2Gj6kBS.html",
+            "https://www.nhaccuatui.com/bai-hat/bad-blood-taylors-version-taylor-swift.OOULHSAmi2Fo.html",
+            "https://www.nhaccuatui.com/bai-hat/wildest-dreams-taylors-version-taylor-swift.lI8o91yNaVUb.html",
+            "https://www.nhaccuatui.com/bai-hat/how-you-get-the-girl-taylors-version-taylor-swift.QKwbN02MDSGH.html",
+            "https://www.nhaccuatui.com/bai-hat/this-love-taylors-version-taylor-swift.UxNxHbRueCI1.html",
+            "https://www.nhaccuatui.com/bai-hat/i-know-places-taylors-version-taylor-swift.sOFqr8S6OBsE.html",
+            "https://www.nhaccuatui.com/bai-hat/clean-taylors-version-taylor-swift.SC2VAgOgpVP7.html",
+            "https://www.nhaccuatui.com/bai-hat/wonderland-taylors-version-taylor-swift.IcCFmuXBG92W.html",
+            "https://www.nhaccuatui.com/bai-hat/you-are-in-love-taylors-version-taylor-swift.ldP3QMdLo10n.html",
+            "https://www.nhaccuatui.com/bai-hat/new-romantics-taylors-version-taylor-swift.uT0eerKLDntA.html",
+            "https://www.nhaccuatui.com/bai-hat/slut-taylors-version-from-the-vault-taylor-swift.ElalH0d48dhi.html",
+            "https://www.nhaccuatui.com/bai-hat/say-dont-go-taylors-version-from-the-vault-taylor-swift.nNXbPgRBqX46.html",
+            "https://www.nhaccuatui.com/bai-hat/now-that-we-dont-talk-taylors-version-from-the-vault-taylor-swift.mGtslvaqEB1n.html",
+            "https://www.nhaccuatui.com/bai-hat/suburban-legends-taylors-version-from-the-vault-taylor-swift.rGZC2NgRsrF2.html",
+            "https://www.nhaccuatui.com/bai-hat/is-it-over-now-taylors-version-from-the-vault-taylor-swift.KDZfXH4WUPY0.html"
+        ]
+    },
+    {
+        id: 7, // THE TORTURED POETS DEPARTMENT: THE ANTHOLOGY - Taylo
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/fortnight-taylor-swift-ft-post-malone.ZoeenFXBxEtz.html",
+            "https://www.nhaccuatui.com/bai-hat/the-tortured-poets-department-taylor-swift.ipsojyqnZjBB.html",
+            "https://www.nhaccuatui.com/bai-hat/my-boy-only-breaks-his-favorite-toys-taylor-swift.fuO7AoYsw5lu.html",
+            "https://www.nhaccuatui.com/bai-hat/down-bad-taylor-swift.2NDYLrRdQ07L.html",
+            "https://www.nhaccuatui.com/bai-hat/so-long-london-taylor-swift.HYvrjQ30FbWN.html",
+            "https://www.nhaccuatui.com/bai-hat/but-daddy-i-love-him-taylor-swift.CkFDEBzZK3Tw.html",
+            "https://www.nhaccuatui.com/bai-hat/fresh-out-the-slammer-taylor-swift.h6Z876UdXzYg.html",
+            "https://www.nhaccuatui.com/bai-hat/florida-taylor-swift-ft-florence-the-machine.TrHy2Kvdbdzd.html",
+            "https://www.nhaccuatui.com/bai-hat/guilty-as-sin-taylor-swift.Vs35hq4oojWI.html",
+            "https://www.nhaccuatui.com/bai-hat/whos-afraid-of-little-old-me-taylor-swift.3KJUNp9E5L1I.html",
+            "https://www.nhaccuatui.com/bai-hat/i-can-fix-him-no-really-i-can-taylor-swift.K2y6DiYaeMs4.html",
+            "https://www.nhaccuatui.com/bai-hat/loml-taylor-swift.N5l9GXRCwpfQ.html",
+            "https://www.nhaccuatui.com/bai-hat/i-can-do-it-with-a-broken-heart-taylor-swift.k5tZ9F0j6SgW.html",
+            "https://www.nhaccuatui.com/bai-hat/the-smallest-man-who-ever-lived-taylor-swift.LJjxLvHzkkrs.html",
+            "https://www.nhaccuatui.com/bai-hat/the-alchemy-taylor-swift.u3ooPhqUpJQI.html",
+            "https://www.nhaccuatui.com/bai-hat/clara-bow-taylor-swift.WPb946aRhmRR.html",
+            "https://www.nhaccuatui.com/bai-hat/the-black-dog-taylor-swift.JqxhP75NbWhj.html",
+            "https://www.nhaccuatui.com/bai-hat/imgonnagetyouback-taylor-swift.4h42Mmxg0elx.html",
+            "https://www.nhaccuatui.com/bai-hat/the-albatross-taylor-swift.lYqr0AQYnXzt.html",
+            "https://www.nhaccuatui.com/bai-hat/chloe-or-sam-or-sophia-or-marcus-taylor-swift.pcu1cQ6FsjUj.html",
+            "https://www.nhaccuatui.com/bai-hat/how-did-it-end-taylor-swift.Dq6t8y0kUcMo.html",
+            "https://www.nhaccuatui.com/bai-hat/so-high-school-taylor-swift.Z5I8LERjArki.html",
+            "https://www.nhaccuatui.com/bai-hat/i-hate-it-here-taylor-swift.gaSXfypjhcgR.html",
+            "https://www.nhaccuatui.com/bai-hat/thank-you-aimee-taylor-swift.gaC7t6Ux0xHv.html",
+            "https://www.nhaccuatui.com/bai-hat/i-look-in-peoples-windows-taylor-swift.W5GUJv9CU7lZ.html",
+            "https://www.nhaccuatui.com/bai-hat/the-prophecy-taylor-swift.vF98qUVMVDQg.html",
+            "https://www.nhaccuatui.com/bai-hat/cassandra-taylor-swift.yTKdKEld38jJ.html",
+            "https://www.nhaccuatui.com/bai-hat/peter-taylor-swift.KkBxxoSUsvAs.html",
+            "https://www.nhaccuatui.com/bai-hat/the-bolter-taylor-swift.RVbEVmYb2gbn.html",
+            "https://www.nhaccuatui.com/bai-hat/robin-taylor-swift.dCnHa2lDCGOG.html",
+        ]
+    },
+    {
+        id: 8, // HIT ME HARD AND SOFT - Billie Eilish
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/skinny-billie-eilish.XZF4ykDorXXL.html",
+            "https://www.nhaccuatui.com/bai-hat/lunch-billie-eilish.PgFzxaJhTAC8.html",
+            "https://www.nhaccuatui.com/bai-hat/chihiro-billie-eilish.DSN82JFUxqFS.html",
+            "https://www.nhaccuatui.com/bai-hat/birds-of-a-feather-billie-eilish.1CdynevOiNtB.html",
+            "https://www.nhaccuatui.com/bai-hat/wildflower-billie-eilish.nCl36vgH8nsz.html",
+            "https://www.nhaccuatui.com/bai-hat/the-greatest-billie-eilish.Oh8DuOmVqwli.html",
+            "https://www.nhaccuatui.com/bai-hat/lamour-de-ma-vie-billie-eilish.0ClUk2vV9vGS.html",
+            "https://www.nhaccuatui.com/bai-hat/the-diner-billie-eilish.qv7iHRG74bnN.html",
+            "https://www.nhaccuatui.com/bai-hat/bittersuite-billie-eilish.6OP3H80yYK0y.html",
+            "https://www.nhaccuatui.com/bai-hat/blue-billie-eilish.uaLlPI0LBz3k.html"
+        ]
+    },
+    {
+        id: 9, // WHEN WE ALL FALL ASLEEP, WHERE DO WE GO? - Billie Eilish
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/-billie-eilish.w5H6sillYt7h.html",
+            "https://www.nhaccuatui.com/bai-hat/bad-guy-billie-eilish.R3Yg0dK4xPgU.html",
+            "https://www.nhaccuatui.com/bai-hat/xanny-billie-eilish.CfwNoyinCcb8.html",
+            "https://www.nhaccuatui.com/bai-hat/you-should-see-me-in-a-crown-billie-eilish.p2dUD1jbK8UI.html",
+            "https://www.nhaccuatui.com/bai-hat/all-the-good-girls-go-to-hell-billie-eilish.D1KRiQl8Kuqv.html",
+            "https://www.nhaccuatui.com/bai-hat/wish-you-were-gay-billie-eilish.0hy0Piu0j9z9.html",
+            "https://www.nhaccuatui.com/bai-hat/when-the-partys-over-billie-eilish.s30LVh6w1a8Q.html",
+            "https://www.nhaccuatui.com/bai-hat/8-billie-eilish.MotOxPbrYPkw.html",
+            "https://www.nhaccuatui.com/bai-hat/my-strange-addiction-billie-eilish.A6XMyjGis9lp.html",
+            "https://www.nhaccuatui.com/bai-hat/bury-a-friend-billie-eilish.ahIz9KFTf5KP.html",
+            "https://www.nhaccuatui.com/bai-hat/ilomilo-billie-eilish.z1mJmIfcFShR.html",
+            "https://www.nhaccuatui.com/bai-hat/listen-before-i-go-billie-eilish.abdP4fdYudFG.html",
+            "https://www.nhaccuatui.com/bai-hat/i-love-you-billie-eilish.wVLvvB1pz4JF.html",
+            "https://www.nhaccuatui.com/bai-hat/goodbye-billie-eilish.2fApIeosYz8g.html"
+        ]
+    },
+    {
+        id: 10, // Happier Than Ever (Explicit) - Billie Eilish
+        urls: [
+            "https://www.nhaccuatui.com/bai-hat/getting-older-billie-eilish.keHB0gEHcXpM.html",
+            "https://www.nhaccuatui.com/bai-hat/i-didnt-change-my-number-explicit-billie-eilish.MshDPXaoZX2P.html",
+            "https://www.nhaccuatui.com/bai-hat/billie-bossa-nova-billie-eilish.31Z3tdIOmNyJ.html",
+            "https://www.nhaccuatui.com/bai-hat/my-future-billie-eilish.8MUeI6EYe75g.html",
+            "https://www.nhaccuatui.com/bai-hat/oxytocin-billie-eilish.bGgResW6FOnr.html",
+            "https://www.nhaccuatui.com/bai-hat/goldwing-billie-eilish.qF37Z5SJsDAV.html",
+            "https://www.nhaccuatui.com/bai-hat/lost-cause-explicit-billie-eilish.A87yPI9xlTax.html",
+            "https://www.nhaccuatui.com/bai-hat/halleys-comet-billie-eilish.BmpMUBfzXqIZ.html",
+            "https://www.nhaccuatui.com/bai-hat/not-my-responsibility-billie-eilish.8HkW5h3NZXbD.html",
+            "https://www.nhaccuatui.com/bai-hat/overheated-explicit-billie-eilish.SrkJaMBCfxFn.html",
+            "https://www.nhaccuatui.com/bai-hat/everybody-dies-billie-eilish.kXX3pKaTG5bG.html",
+            "https://www.nhaccuatui.com/bai-hat/your-power-billie-eilish.Pk5zu0Pa5IMZ.html",
+            "https://www.nhaccuatui.com/bai-hat/nda-explicit-billie-eilish.T4PrLEsgy6vq.html",
+            "https://www.nhaccuatui.com/bai-hat/therefore-i-am-billie-eilish.1YPu8aPmDyNo.html",
+            "https://www.nhaccuatui.com/bai-hat/happier-than-ever-explicit-billie-eilish.EtcXYAvJ6RYy.html",
+            "https://www.nhaccuatui.com/bai-hat/male-fantasy-billie-eilish.TOvU5PVJSH0V.html"
+        ]
+    }
+]
+
+module.exports = playlists;
